@@ -96,7 +96,6 @@ a {
   color: #d1604a;
   font-size: 14px;
   font-weight: 500;
-  box-shadow: 0 8px 18px rgba(231, 111, 81, 0.08);
 }
 
 .hero h1 {
@@ -174,7 +173,6 @@ a {
   top: -50px;
   right: -45px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(244, 162, 97, 0.25), transparent 70%);
 }
 
 .small-label,

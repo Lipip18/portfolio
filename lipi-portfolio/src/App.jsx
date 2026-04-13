@@ -159,7 +159,7 @@ function App() {
           <section className="hero">
             <div className="hero-text">
               <p className="hero-badge">
-                UI/UX Designer • Research-driven • Beginner Portfolio
+                UI/UX Designer
               </p>
 
               <h1>
@@ -187,7 +187,6 @@ function App() {
 
             <div className="hero-card">
               <div className="card">
-                <p className="small-label">Portfolio Snapshot</p>
                 <h3>Designing with clarity, research, and usability</h3>
 
                 <div className="stats-grid">
@@ -203,7 +202,7 @@ function App() {
 
                   <div className="mini-card">
                     <p>Tools</p>
-                    <h4>Figma • React</h4>
+                    <h4>Figma • Canva</h4>
                   </div>
 
                   <div className="mini-card">
@@ -217,7 +216,7 @@ function App() {
 
           <section id="work" className="section">
             <SectionTitle
-              eyebrow="Selected Work"
+              eyebrow="Projects"
               title="Projects that reflect design thinking and problem solving"
               description="These projects showcase my ability to identify user pain points, simplify workflows, and create interfaces that are visually clear, structured, and responsive."
             />
@@ -394,15 +393,15 @@ function App() {
 
               <div className="contact-links">
                 <a
-                  href="mailto:lipipatel1810@gmail.co"
+                  href="mailto:lipipatel1810@gmail.com"
                   className="btn btn-secondary"
                 >
                   Email
                 </a>
-                <a href="#" className="btn btn-secondary">
+                <a href="https://www.linkedin.com/in/lipi-patel-b81146284/" className="btn btn-secondary">
                   LinkedIn
                 </a>
-                <a href="#" className="btn btn-secondary">
+                <a href="https://github.com/Lipip18" className="btn btn-secondary">
                   GitHub
                 </a>
               </div>
