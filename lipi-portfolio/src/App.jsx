@@ -2,34 +2,14 @@ import "./App.css";
 
 const projects = [
   {
-    title: "LaunchPath",
-    type: "AI-Powered Career Readiness Platform • MERN Stack",
+    title: "Biller Dashboard",
+    type: "Billing Dashboard • React + REST API • Doc RCM Experts",
     summary:
-      "A full-stack job search and career readiness platform for final-year CS students in India, featuring AI-driven 30-day sprint plans, skill-gap analysis, and a Kanban application tracker.",
+      "A full-stack internal billing dashboard built during my internship at Doc RCM Experts, giving billing teams a real-time view of claims and financial performance.",
     problem:
-      "Final-year CS students in India lack structured tools to bridge the gap between their current skills and job market requirements, leading to unorganised job searches and missed opportunities.",
+      "Billing teams had no centralised, real-time view of key metrics like Pending Claims, Denial Rate, and Net Collection %, making it hard to track performance and act on data quickly.",
     impact:
-      "Engineered a match-score algorithm comparing student skill profiles against live JD requirements with High/Medium/Low indicators and missing-skill callouts. Built a drag-and-drop Kanban tracker across 5 stages (Saved → Applied → Shortlisted → Interview → Offer/Rejected) with a Rejection Decoder feature. Designed the complete UI in Figma — 11 screens, a full component library, and mobile versions for 4 key screens using an 8px grid and Inter typography.",
-    tags: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Figma",
-      "REST API",
-      "AI Integration",
-      "Kanban",
-    ],
-  },
-  {
-    title: "Healthcare Billing Dashboard",
-    type: "Full Stack Dashboard • React + REST API • Doc RCM Experts",
-    summary:
-      "A full-stack healthcare billing dashboard built during my internship at Doc RCM Experts, helping billing teams track financial performance and claims in real time.",
-    problem:
-      "Billing teams lacked a centralised, real-time view of key financial metrics like Pending Claims, Denial Rate, and Net Collection %, making it difficult to track and act on performance data.",
-    impact:
-      "Built real-time KPI cards (Total Collected, Pending Claims, Denial Rate, Net Collection %), a dynamic patient billing table with live Paid/Denied status indicators, sortable columns, and pagination. Implemented a Top Revenue Drivers bar chart and Revenue Opportunity section with progress bars. Engineered a fixed left sidebar with nested dropdowns (Medical Coding, AR Follow-up, Denial Management) and a global search bar. Applied a strict brand design system (Navy #0A1A3C + Red #E31E24) documented in a Behance case study.",
+      "Owned the React component architecture and REST API integration end-to-end. Built real-time KPI cards (Total Collected, Pending Claims, Denial Rate, Net Collection %), a dynamic patient billing table with live Paid/Denied status indicators, sortable columns, and paginated data rendering. Implemented a Top Revenue Drivers bar chart and a Revenue Opportunity section with progress bars across the claim pipeline. Engineered a fixed left sidebar with nested dropdowns (Medical Coding, AR Follow-up, Denial Management) and a global search bar. Applied a strict brand system — Navy #0A1A3C + Red #E31E24, flat cards, 8px rounded corners — documented in a Behance case study.",
     tags: [
       "React.js",
       "Node.js",
@@ -37,8 +17,6 @@ const projects = [
       "Figma",
       "UI/UX Design",
       "Behance",
-      "Healthcare Tech",
-      "Data Visualisation",
     ],
   },
   {
@@ -74,10 +52,6 @@ const process = [
   {
     title: "UI/UX Thinking",
     text: "I design interfaces in Figma with component libraries, spacing grids, and brand systems — then implement them precisely in React.",
-  },
-  {
-    title: "AI Integration",
-    text: "I build AI-powered features like sprint plan generators and skill-gap matching engines that add real, measurable product value.",
   },
 ];
 
@@ -128,12 +102,13 @@ function App() {
     <div className="portfolio">
       <div className="container">
         <header className="navbar">
-          <div className="logo">
+          <div>
             Lipi Patel • Full Stack Developer & UI/UX Designer
           </div>
 
           <nav className="nav-links">
             <a href="#work">Projects</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
@@ -145,7 +120,7 @@ function App() {
           <section className="hero">
             <div className="hero-text">
               <p className="hero-badge">
-                Full Stack Developer • MERN Stack • UI/UX Designer
+                Full Stack Web Developer (MERN) • UI/UX Designer
               </p>
 
               <h1>
@@ -155,12 +130,14 @@ function App() {
               </h1>
 
               <p className="hero-description">
-                Computer Science student at Nirma University (GPA: 8.17) with
-                hands-on experience delivering end-to-end products. Built
-                LaunchPath, an AI-powered career platform for CS students, and
-                shipped a live healthcare billing dashboard during my internship
-                at Doc RCM Experts. Actively seeking internship or entry-level
-                roles where I can contribute immediately and grow fast.
+                Computer Science student at Nirma University (GPA: 8.39)
+                with hands-on experience delivering end-to-end products —
+                from REST API development and MongoDB schema design to
+                responsive React frontends and Figma UI systems. Delivered
+                the Biller Dashboard during a summer internship at Doc RCM
+                Experts, owning the full stack from database to UI.
+                Actively seeking internship or entry-level roles where I
+                can contribute immediately and grow fast.
               </p>
 
               <div className="hero-buttons">
@@ -176,23 +153,23 @@ function App() {
             <div className="hero-card">
               <div className="card">
                 <h3>
-                  Building scalable digital products with design and development
+                  Full-stack engineering backed by real product ownership
                 </h3>
 
                 <div className="stats-grid">
                   <div className="mini-card">
-                    <p>Projects</p>
-                    <h4>3 Full Stack Apps</h4>
+                    <p>Experience</p>
+                    <h4>Doc RCM Experts Intern</h4>
                   </div>
 
                   <div className="mini-card">
-                    <p>Focus</p>
-                    <h4>MERN + UI/UX</h4>
+                    <p>Stack</p>
+                    <h4>MERN + Figma</h4>
                   </div>
 
                   <div className="mini-card">
                     <p>GPA</p>
-                    <h4>8.17 / 10</h4>
+                    <h4>8.39 / 10</h4>
                   </div>
 
                   <div className="mini-card">
@@ -245,8 +222,8 @@ function App() {
           <section id="experience" className="section">
             <SectionTitle
               eyebrow="Experience"
-              title="Real-world internship experience"
-              description="Shipped a live full-stack product during my internship at a healthcare tech company."
+              title="Hands-on internship experience"
+              description="Owned a real internal product end-to-end during my internship at a healthcare tech company."
             />
 
             <div className="card about-card">
@@ -257,10 +234,10 @@ function App() {
               <p>May 2026 — Jun 2026 · Ahmedabad, Gujarat, India</p>
               <br />
               <p>
-                Built and shipped a full-stack healthcare billing dashboard from
-                scratch — handled component architecture in React, REST API
-                integration, and end-to-end UI design for a live product used
-                by billing teams in production.
+                Designed and built an internal billing dashboard from
+                scratch — owned the React component architecture, REST API
+                integration, and end-to-end UI so company teams could add,
+                view, and manage billing data.
               </p>
             </div>
           </section>
@@ -276,26 +253,25 @@ function App() {
 
             <div className="card about-card">
               <p>
-                I'm a Computer Science student at Nirma University (GPA: 8.17),
-                passionate about building full-stack web applications using the
-                MERN stack. I enjoy owning the entire product — designing the UI
-                in Figma, building backend APIs in Node.js and Express, and
-                implementing the frontend in React.
+                I'm a Computer Science student at Nirma University (GPA:
+                8.39), passionate about building full-stack web applications
+                using the MERN stack. I enjoy owning the entire product —
+                designing the UI in Figma, building backend APIs in Node.js
+                and Express, and implementing the frontend in React.
               </p>
 
               <p>
-                During my internship at Doc RCM Experts, I built and shipped a
-                full-stack healthcare billing dashboard from scratch — handling
-                component architecture, REST API integration, and end-to-end UI
-                design for a live product. Outside of that, I'm building
-                LaunchPath, an AI-powered career readiness platform for
-                final-year CS students in India.
+                During my internship at Doc RCM Experts, I designed and
+                built an internal billing dashboard from scratch — owning
+                React component architecture, REST API integration, and
+                end-to-end UI so company teams could add, view, and manage
+                billing data.
               </p>
 
               <p>
-                I'm actively looking for internship or entry-level opportunities
-                where I can contribute immediately, work on real products, and
-                grow as a developer.
+                I'm actively looking for internship or entry-level
+                opportunities where I can contribute immediately, work on
+                real products, and grow as a developer.
               </p>
             </div>
           </section>
@@ -336,7 +312,7 @@ function App() {
             <div className="card about-card">
               <h3>B.Tech in Computer Science and Engineering</h3>
               <p>Nirma University</p>
-              <p>GPA: 8.17 / 10</p>
+              <p>GPA: 8.39 / 10</p>
               <p>Jul 2023 — Present</p>
               <p>Ahmedabad, Gujarat, India</p>
               <p>Expected Graduation: June 2027</p>
@@ -379,7 +355,7 @@ function App() {
                 </p>
 
                 <p>
-                  <strong>Role:</strong> Full Stack Developer & UI/UX Designer
+                  <strong>Role:</strong> Full Stack Web Developer (MERN) & UI/UX Designer
                 </p>
 
                 <p>
