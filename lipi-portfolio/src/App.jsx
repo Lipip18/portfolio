@@ -3,19 +3,19 @@ import "./App.css";
 const projects = [
   {
     title: "Biller Dashboard",
-    type: "Billing Dashboard • React + REST API • Doc RCM Experts",
+    type: "Billing Dashboard • React + Figma • Doc RCM Experts",
     summary:
-      "A full-stack internal billing dashboard built during my internship at Doc RCM Experts, giving billing teams a real-time view of claims and financial performance.",
+      "An internal billing dashboard built during my internship at Doc RCM Experts, giving billing teams a real-time view of claims and financial performance.",
     problem:
       "Billing teams had no centralised, real-time view of key metrics like Pending Claims, Denial Rate, and Net Collection %, making it hard to track performance and act on data quickly.",
     impact:
-      "Owned the React component architecture and REST API integration end-to-end. Built real-time KPI cards (Total Collected, Pending Claims, Denial Rate, Net Collection %), a dynamic patient billing table with live Paid/Denied status indicators, sortable columns, and paginated data rendering. Implemented a Top Revenue Drivers bar chart and a Revenue Opportunity section with progress bars across the claim pipeline. Engineered a fixed left sidebar with nested dropdowns (Medical Coding, AR Follow-up, Denial Management) and a global search bar. Applied a strict brand system — Navy #0A1A3C + Red #E31E24, flat cards, 8px rounded corners — documented in a Behance case study.",
+      "Owned the UI/UX design and React frontend build end-to-end, wiring components up to live data via REST API calls. Designed real-time KPI cards (Total Collected, Pending Claims, Denial Rate, Net Collection %), a dynamic patient billing table with live Paid/Denied status indicators, sortable columns, and paginated data rendering. Built a Top Revenue Drivers bar chart and a Revenue Opportunity section with progress bars across the claim pipeline. Engineered a fixed left sidebar with nested dropdowns (Medical Coding, AR Follow-up, Denial Management) and a global search bar. Designed high-fidelity Figma mockups and a reusable component library first, then applied a strict brand system — Navy #0A1A3C + Red #E31E24, flat cards, 8px rounded corners — documented in a Behance case study.",
     tags: [
       "React.js",
-      "Node.js",
-      "REST API",
       "Figma",
       "UI/UX Design",
+      "REST API Integration",
+      "Responsive Design",
       "Behance",
     ],
   },
@@ -27,7 +27,7 @@ const projects = [
     problem:
       "Managing seminar hall bookings manually led to scheduling conflicts, inefficient approvals, and poor visibility into availability for students, faculty, and administrators.",
     impact:
-      "Built RESTful APIs with Node.js and Express.js for booking logic, conflict detection, and event CRUD operations. Designed a responsive React frontend with an intuitive booking flow and calendar-style schedule view, backed by MongoDB for persistent data storage.",
+      "Built RESTful APIs with Node.js and Express.js for booking logic, conflict detection, and event CRUD operations. Designed a MongoDB schema for hall availability, time slots, and booking history to enable fast conflict checks before confirming a reservation. Implemented role-based access control (admin vs. regular user) so only authorized users could approve, modify, or cancel bookings. Added client-side form validation with real-time slot-availability feedback, plus an admin overview to track upcoming bookings across all halls with filtering by date, hall, and status. Designed a responsive React frontend with an intuitive booking flow and calendar-style schedule view.",
     tags: [
       "React.js",
       "Node.js",
@@ -38,12 +38,31 @@ const projects = [
       "Responsive Design",
     ],
   },
+  {
+    title: "AutoCare-Nearby",
+    type: "Multi-Sided Marketplace • MERN + LLM Assistant • In Progress",
+    summary:
+      "A full-stack marketplace currently in development, connecting vehicle owners with independent, self-registered autocare businesses.",
+    problem:
+      "Vehicle owners have no single place to discover, compare, and book real autocare businesses, while small autocare companies have no easy way to list their services online and manage bookings.",
+    impact:
+      "Actively architecting a dual-role backend in Node.js, Express, and MongoDB with separate JWT-based authentication flows for customers and registered businesses, and role-scoped REST APIs for each. Building a business-facing dashboard so autocare companies can self-register, list and manage real services with live pricing, and track incoming bookings through status updates (pending → confirmed → completed). Designing relational MongoDB schemas linking Companies, Services, Bookings, and Reviews, with denormalized fields for fast, low-latency reads on the customer-facing marketplace. Integrating a Generative AI/LLM-powered assistant (Claude API) grounded in live database data, so customer and business queries are answered accurately without hallucinated pricing or availability. Building a company-scoped booking flow in React with multi-step forms, real-time filtering by city and vehicle type, and a public company discovery and profile experience.",
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT Auth",
+      "LLM Integration",
+      "REST API",
+    ],
+  },
 ];
 
 const process = [
   {
-    title: "Full Stack Ownership",
-    text: "I take projects end-to-end — from MongoDB schema design and REST API development to React frontends and Figma UI systems.",
+    title: "End-to-End Ownership",
+    text: "On my own projects I take things end-to-end — from MongoDB schema design and REST API development to React frontends and Figma UI systems.",
   },
   {
     title: "API-First Development",
@@ -130,14 +149,16 @@ function App() {
               </h1>
 
               <p className="hero-description">
-                Computer Science student at Nirma University (GPA: 8.39)
+                Computer Science student at Nirma University (GPA: 8.17)
                 with hands-on experience delivering end-to-end products —
                 from REST API development and MongoDB schema design to
                 responsive React frontends and Figma UI systems. Delivered
-                the Biller Dashboard during a summer internship at Doc RCM
-                Experts, owning the full stack from database to UI.
-                Actively seeking internship or entry-level roles where I
-                can contribute immediately and grow fast.
+                the Biller Dashboard as Frontend Developer & UI/UX Designer
+                during a summer internship at Doc RCM Experts, and currently
+                building AutoCare-Nearby, a full-stack marketplace with an
+                integrated LLM-powered assistant. Actively seeking
+                internship or entry-level roles where I can contribute
+                immediately and grow fast.
               </p>
 
               <div className="hero-buttons">
@@ -169,7 +190,7 @@ function App() {
 
                   <div className="mini-card">
                     <p>GPA</p>
-                    <h4>8.39 / 10</h4>
+                    <h4>8.17 / 10</h4>
                   </div>
 
                   <div className="mini-card">
@@ -184,8 +205,8 @@ function App() {
           <section id="work" className="section">
             <SectionTitle
               eyebrow="Projects"
-              title="Full-stack products built from idea to deployment"
-              description="Each project covers the complete stack — backend APIs, database design, React frontend, and UI/UX in Figma."
+              title="Products built from idea to deployment"
+              description="From frontend and UI/UX work on a live product to full-stack builds spanning backend APIs, database design, and React frontends."
             />
 
             <div className="projects-grid">
@@ -223,7 +244,7 @@ function App() {
             <SectionTitle
               eyebrow="Experience"
               title="Hands-on internship experience"
-              description="Owned a real internal product end-to-end during my internship at a healthcare tech company."
+              description="Owned the frontend and UI/UX for a real internal product during my internship at a healthcare tech company."
             />
 
             <div className="card about-card">
@@ -234,10 +255,11 @@ function App() {
               <p>May 2026 — Jun 2026 · Ahmedabad, Gujarat, India</p>
               <br />
               <p>
-                Designed and built an internal billing dashboard from
-                scratch — owned the React component architecture, REST API
-                integration, and end-to-end UI so company teams could add,
-                view, and manage billing data.
+                Owned the frontend build and UI/UX design for a live
+                healthcare billing dashboard — designed the interface in
+                Figma and translated it into a production React component
+                library wired up to live data via REST API calls, so
+                company teams could add, view, and manage billing data.
               </p>
             </div>
           </section>
@@ -246,26 +268,29 @@ function App() {
             <div>
               <SectionTitle
                 eyebrow="About Me"
-                title="A full-stack developer who designs as well as builds"
-                description="I don't just write code — I take ownership of the entire product from database to design."
+                title="A developer who designs as well as builds"
+                description="I care about the full product experience — from how it's designed to how it's engineered."
               />
             </div>
 
             <div className="card about-card">
               <p>
                 I'm a Computer Science student at Nirma University (GPA:
-                8.39), passionate about building full-stack web applications
-                using the MERN stack. I enjoy owning the entire product —
-                designing the UI in Figma, building backend APIs in Node.js
-                and Express, and implementing the frontend in React.
+                8.17), passionate about building full-stack web applications
+                using the MERN stack and designing production UI/UX systems
+                in Figma. Comfortable in Python, Java, and JavaScript, with
+                day-to-day use of Git/GitHub for version control.
               </p>
 
               <p>
-                During my internship at Doc RCM Experts, I designed and
-                built an internal billing dashboard from scratch — owning
-                React component architecture, REST API integration, and
-                end-to-end UI so company teams could add, view, and manage
-                billing data.
+                During my internship at Doc RCM Experts, I worked as a
+                Frontend Developer & UI/UX Designer — owning the interface
+                design in Figma and the React frontend build for a live
+                healthcare billing dashboard, so company teams could add,
+                view, and manage billing data. On my own projects, like
+                AutoCare-Nearby, I take ownership of the full stack —
+                architecting the backend, designing the database schema,
+                and building the frontend and UI/UX.
               </p>
 
               <p>
@@ -312,7 +337,7 @@ function App() {
             <div className="card about-card">
               <h3>B.Tech in Computer Science and Engineering</h3>
               <p>Nirma University</p>
-              <p>GPA: 8.39 / 10</p>
+              <p>GPA: 8.17 / 10</p>
               <p>Jul 2023 — Present</p>
               <p>Ahmedabad, Gujarat, India</p>
               <p>Expected Graduation: June 2027</p>
