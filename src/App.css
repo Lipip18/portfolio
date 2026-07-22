@@ -550,6 +550,24 @@ a {
   padding: 0 20px 20px;
 }
 
+/* Project action links (View Code / Live Demo / Case Study) —
+   sits below tags, so it shares the same horizontal padding rhythm
+   and gets its own top border to separate it from the tag row. */
+.project-card .project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 20px 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.project-card .project-links .btn {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+}
+
 .process-card:hover,
 .about-card:hover {
   border-color: var(--line-strong);
@@ -592,6 +610,35 @@ a {
 .info-box p {
   margin: 0;
   font-size: 14px;
+}
+
+/* Bullet list used for project "What I Built" impact points —
+   replaces the old single paragraph; styled to match .info-box p
+   (same 14px size, ink-soft color) with a signal-colored dash marker
+   instead of a default browser bullet. */
+.info-box .impact-list {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-box .impact-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.info-box .impact-list li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: var(--signal);
+  font-weight: 600;
 }
 
 .tags {
@@ -693,6 +740,34 @@ a {
 
 .about-card p strong {
   color: var(--ink);
+  font-weight: 600;
+}
+
+/* Experience list — used in place of a single paragraph so the
+   internship section reads as scannable achievements, matching
+   the visual weight of .about-card p (15px, ink-soft). */
+.experience-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.experience-list li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: var(--signal);
   font-weight: 600;
 }
 

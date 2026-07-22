@@ -1,5 +1,8 @@
 import "./App.css";
 
+// TODO: Replace with your actual resume file path/URL
+const RESUME_URL = "/resume/Lipi_Patel_Resume.pdf";
+
 const projects = [
   {
     title: "Biller Dashboard",
@@ -8,8 +11,15 @@ const projects = [
       "An internal billing dashboard built during my internship at Doc RCM Experts, giving billing teams a real-time view of claims and financial performance.",
     problem:
       "Billing teams had no centralised, real-time view of key metrics like Pending Claims, Denial Rate, and Net Collection %, making it hard to track performance and act on data quickly.",
-    impact:
-      "Owned the UI/UX design and React frontend build end-to-end, wiring components up to live data via REST API calls. Designed real-time KPI cards (Total Collected, Pending Claims, Denial Rate, Net Collection %), a dynamic patient billing table with live Paid/Denied status indicators, sortable columns, and paginated data rendering. Built a Top Revenue Drivers bar chart and a Revenue Opportunity section with progress bars across the claim pipeline. Engineered a fixed left sidebar with nested dropdowns (Medical Coding, AR Follow-up, Denial Management) and a global search bar. Designed high-fidelity Figma mockups and a reusable component library first, then applied a strict brand system — Navy #0A1A3C + Red #E31E24, flat cards, 8px rounded corners — documented in a Behance case study.",
+    impact: [
+      "Owned the UI/UX design and React frontend build end-to-end, wiring components up to live data via REST API calls.",
+      "Designed real-time KPI cards tracking 4 core metrics: Total Collected, Pending Claims, Denial Rate, and Net Collection %.",
+      "Built a dynamic patient billing table with live Paid/Denied status indicators, sortable columns, and paginated data rendering.",
+      "Implemented a Top Revenue Drivers bar chart and a Revenue Opportunity section with progress bars across the claim pipeline.",
+      "Engineered a fixed left sidebar with nested dropdowns (Medical Coding, AR Follow-up, Denial Management) and a global search bar.",
+      "Designed high-fidelity Figma mockups and a reusable component library spanning 6+ screens before development.",
+      "Applied a strict brand system — Navy #0A1A3C + Red #E31E24, flat cards, 8px rounded corners — documented in a Behance case study.",
+    ],
     tags: [
       "React.js",
       "Figma",
@@ -18,6 +28,10 @@ const projects = [
       "Responsive Design",
       "Behance",
     ],
+    // TODO: Add your actual links
+    repoLink: "",
+    liveLink: "",
+    caseStudyLink: "", // Behance case study
   },
   {
     title: "Seminar Hall Management System",
@@ -26,8 +40,14 @@ const projects = [
       "A full-stack booking platform allowing users to reserve seminar halls, view schedules, and manage events in real time.",
     problem:
       "Managing seminar hall bookings manually led to scheduling conflicts, inefficient approvals, and poor visibility into availability for students, faculty, and administrators.",
-    impact:
-      "Built RESTful APIs with Node.js and Express.js for booking logic, conflict detection, and event CRUD operations. Designed a MongoDB schema for hall availability, time slots, and booking history to enable fast conflict checks before confirming a reservation. Implemented role-based access control (admin vs. regular user) so only authorized users could approve, modify, or cancel bookings. Added client-side form validation with real-time slot-availability feedback, plus an admin overview to track upcoming bookings across all halls with filtering by date, hall, and status. Designed a responsive React frontend with an intuitive booking flow and calendar-style schedule view.",
+    impact: [
+      "Built RESTful APIs with Node.js and Express.js for booking logic, conflict detection, and event CRUD operations.",
+      "Designed a MongoDB schema for hall availability, time slots, and booking history to enable fast conflict checks before confirming a reservation.",
+      "Implemented role-based access control (admin vs. regular user) so only authorized users could approve, modify, or cancel bookings.",
+      "Added client-side form validation with real-time slot-availability feedback.",
+      "Built an admin overview to track upcoming bookings across all halls, with filtering by date, hall, and status.",
+      "Designed a responsive React frontend with an intuitive booking flow and calendar-style schedule view.",
+    ],
     tags: [
       "React.js",
       "Node.js",
@@ -37,6 +57,9 @@ const projects = [
       "Figma",
       "Responsive Design",
     ],
+    repoLink: "",
+    liveLink: "",
+    caseStudyLink: "",
   },
   {
     title: "AutoCare-Nearby",
@@ -45,8 +68,14 @@ const projects = [
       "A full-stack marketplace currently in development, connecting vehicle owners with independent, self-registered autocare businesses.",
     problem:
       "Vehicle owners have no single place to discover, compare, and book real autocare businesses, while small autocare companies have no easy way to list their services online and manage bookings.",
-    impact:
-      "Actively architecting a dual-role backend in Node.js, Express, and MongoDB with separate JWT-based authentication flows for customers and registered businesses, and role-scoped REST APIs for each. Building a business-facing dashboard so autocare companies can self-register, list and manage real services with live pricing, and track incoming bookings through status updates (pending → confirmed → completed). Designing relational MongoDB schemas linking Companies, Services, Bookings, and Reviews, with denormalized fields for fast, low-latency reads on the customer-facing marketplace. Integrating a Generative AI/LLM-powered assistant (Claude API) grounded in live database data, so customer and business queries are answered accurately without hallucinated pricing or availability. Building a company-scoped booking flow in React with multi-step forms, real-time filtering by city and vehicle type, and a public company discovery and profile experience.",
+    impact: [
+      "Architecting a dual-role backend in Node.js, Express, and MongoDB with separate JWT-based authentication flows for customers and registered businesses.",
+      "Building role-scoped REST APIs for each user type (customers vs. businesses).",
+      "Building a business-facing dashboard so autocare companies can self-register, list and manage services with live pricing, and track bookings through status updates (pending → confirmed → completed).",
+      "Designing relational MongoDB schemas linking Companies, Services, Bookings, and Reviews, with denormalized fields for fast, low-latency reads.",
+      "Integrating a Generative AI/LLM-powered assistant (Claude API) grounded in live database data, so queries are answered accurately without hallucinated pricing or availability.",
+      "Building a company-scoped booking flow in React with multi-step forms, real-time filtering by city and vehicle type, and a public company discovery/profile experience.",
+    ],
     tags: [
       "React.js",
       "Node.js",
@@ -56,6 +85,9 @@ const projects = [
       "LLM Integration",
       "REST API",
     ],
+    repoLink: "",
+    liveLink: "",
+    caseStudyLink: "",
   },
 ];
 
@@ -81,7 +113,7 @@ const skillGroups = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "RESTful API Design"],
+    items: ["Node.js", "Express.js", "RESTful API Design", "JWT Authentication"],
   },
   {
     category: "Database",
@@ -97,13 +129,21 @@ const skillGroups = [
     ],
   },
   {
-    category: "Tools & DevOps",
-    items: ["Git", "GitHub", "VS Code", "npm"],
+    category: "Tools & Practices",
+    items: ["Git", "GitHub", "VS Code", "npm", "AI-Assisted Development (Claude API)"],
   },
   {
     category: "Languages",
     items: ["JavaScript", "Java", "Python"],
   },
+];
+
+// Experience broken into scannable bullets instead of one paragraph,
+// consistent with how the project cards present impact.
+const experienceBullets = [
+  "Owned the full frontend build and UI/UX design for a live healthcare billing dashboard, taking it from Figma concept to production React deployment.",
+  "Designed high-fidelity Figma mockups and a reusable component library spanning 6+ screens, establishing visual consistency across the product.",
+  "Converted Figma designs into a production React component library integrated with live data through REST API calls, directly supporting real-time financial reporting for billing staff.",
 ];
 
 function SectionTitle({ eyebrow, title, description }) {
@@ -132,6 +172,9 @@ function App() {
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
+            <a href={RESUME_URL} target="_blank" rel="noreferrer">
+              Resume
+            </a>
           </nav>
         </header>
 
@@ -149,7 +192,7 @@ function App() {
               </h1>
 
               <p className="hero-description">
-                Computer Science student at Nirma University (GPA: 8.17)
+                Computer Science student at Nirma University (GPA: 8.39)
                 with hands-on experience delivering end-to-end products —
                 from REST API development and MongoDB schema design to
                 responsive React frontends and Figma UI systems. Delivered
@@ -167,6 +210,14 @@ function App() {
                 </a>
                 <a href="#contact" className="btn btn-secondary">
                   Contact Me
+                </a>
+                <a
+                  href={RESUME_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-secondary"
+                >
+                  Download Resume
                 </a>
               </div>
             </div>
@@ -190,7 +241,7 @@ function App() {
 
                   <div className="mini-card">
                     <p>GPA</p>
-                    <h4>8.17 / 10</h4>
+                    <h4>8.39 / 10</h4>
                   </div>
 
                   <div className="mini-card">
@@ -225,7 +276,11 @@ function App() {
 
                   <div className="info-box">
                     <h4>What I Built</h4>
-                    <p>{project.impact}</p>
+                    <ul className="impact-list">
+                      {project.impact.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
 
                   <div className="tags">
@@ -235,6 +290,41 @@ function App() {
                       </span>
                     ))}
                   </div>
+
+                  {(project.repoLink || project.liveLink || project.caseStudyLink) && (
+                    <div className="project-links">
+                      {project.repoLink && (
+                        <a
+                          href={project.repoLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="btn btn-secondary"
+                        >
+                          View Code
+                        </a>
+                      )}
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="btn btn-secondary"
+                        >
+                          Live Demo
+                        </a>
+                      )}
+                      {project.caseStudyLink && (
+                        <a
+                          href={project.caseStudyLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="btn btn-secondary"
+                        >
+                          Case Study
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -254,13 +344,11 @@ function App() {
               </p>
               <p>May 2026 — Jun 2026 · Ahmedabad, Gujarat, India</p>
               <br />
-              <p>
-                Owned the frontend build and UI/UX design for a live
-                healthcare billing dashboard — designed the interface in
-                Figma and translated it into a production React component
-                library wired up to live data via REST API calls, so
-                company teams could add, view, and manage billing data.
-              </p>
+              <ul className="experience-list">
+                {experienceBullets.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
             </div>
           </section>
 
@@ -276,7 +364,7 @@ function App() {
             <div className="card about-card">
               <p>
                 I'm a Computer Science student at Nirma University (GPA:
-                8.17), passionate about building full-stack web applications
+                8.39), passionate about building full-stack web applications
                 using the MERN stack and designing production UI/UX systems
                 in Figma. Comfortable in Python, Java, and JavaScript, with
                 day-to-day use of Git/GitHub for version control.
@@ -337,7 +425,7 @@ function App() {
             <div className="card about-card">
               <h3>B.Tech in Computer Science and Engineering</h3>
               <p>Nirma University</p>
-              <p>GPA: 8.17 / 10</p>
+              <p>GPA: 8.39 / 10</p>
               <p>Jul 2023 — Present</p>
               <p>Ahmedabad, Gujarat, India</p>
               <p>Expected Graduation: June 2027</p>
@@ -420,6 +508,15 @@ function App() {
                   className="btn btn-secondary"
                 >
                   GitHub
+                </a>
+
+                <a
+                  href={RESUME_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-secondary"
+                >
+                  Resume
                 </a>
               </div>
             </div>
