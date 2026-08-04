@@ -28,10 +28,35 @@ const projects = [
       "Responsive Design",
       "Behance",
     ],
-    // TODO: Add your actual links
+    // Internal company product — no public repo. Add if you get sign-off to share.
     repoLink: "",
     liveLink: "",
     caseStudyLink: "", // Behance case study
+  },
+  {
+    title: "TransitOps – Smart Transport Operations Platform",
+    type: "Full Stack Web Application • MERN Stack • 8-Hour Hackathon",
+    summary:
+      "A full-stack fleet management platform built solo during an 8-hour hackathon, covering vehicles, drivers, trips, maintenance, and fuel management.",
+    problem:
+      "Fleet operators lacked a single platform to track vehicles, drivers, trips, and maintenance schedules together, making day-to-day fleet operations slow and error-prone.",
+    impact: [
+      "Built a full-stack fleet management platform end-to-end within an 8-hour hackathon window, covering vehicles, drivers, trips, maintenance, and fuel management modules.",
+      "Designed responsive React dashboards with KPI cards, charts, tables, CSV export, and role-based navigation for efficient fleet operations.",
+      "Developed RESTful APIs and integrated MongoDB to support secure CRUD operations and automated maintenance workflows.",
+    ],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+      "REST APIs",
+    ],
+    repoLink: "https://github.com/Lipip18/-TransitOps",
+    liveLink: "",
+    caseStudyLink: "",
   },
   {
     title: "Seminar Hall Management System",
@@ -57,35 +82,7 @@ const projects = [
       "Figma",
       "Responsive Design",
     ],
-    repoLink: "",
-    liveLink: "",
-    caseStudyLink: "",
-  },
-  {
-    title: "AutoCare-Nearby",
-    type: "Multi-Sided Marketplace • MERN + LLM Assistant • In Progress",
-    summary:
-      "A full-stack marketplace currently in development, connecting vehicle owners with independent, self-registered autocare businesses.",
-    problem:
-      "Vehicle owners have no single place to discover, compare, and book real autocare businesses, while small autocare companies have no easy way to list their services online and manage bookings.",
-    impact: [
-      "Architecting a dual-role backend in Node.js, Express, and MongoDB with separate JWT-based authentication flows for customers and registered businesses.",
-      "Building role-scoped REST APIs for each user type (customers vs. businesses).",
-      "Building a business-facing dashboard so autocare companies can self-register, list and manage services with live pricing, and track bookings through status updates (pending → confirmed → completed).",
-      "Designing relational MongoDB schemas linking Companies, Services, Bookings, and Reviews, with denormalized fields for fast, low-latency reads.",
-      "Integrating a Generative AI/LLM-powered assistant (Claude API) grounded in live database data, so queries are answered accurately without hallucinated pricing or availability.",
-      "Building a company-scoped booking flow in React with multi-step forms, real-time filtering by city and vehicle type, and a public company discovery/profile experience.",
-    ],
-    tags: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT Auth",
-      "LLM Integration",
-      "REST API",
-    ],
-    repoLink: "",
+    repoLink: "https://github.com/Lipip18/seminar-app",
     liveLink: "",
     caseStudyLink: "",
   },
@@ -472,7 +469,7 @@ function App() {
                 </p>
 
                 <p>
-                  <strong>Phone:</strong> 6352139065
+                  <strong>Phone:</strong> +91-6352139065
                 </p>
 
                 <p>
